@@ -6,3 +6,5 @@
 5. fazer o modulador 12V 360A
 6. objetivo:
 7. fazer um motor de torna ou motor de frigorifico trabalhar sem problemas.
+8. falta fazer o transformador, trabalho em curso
+9. fazer as bobines do transformador.
