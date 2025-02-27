@@ -47,3 +47,27 @@ Vou gerar uma **imagem com os cálculos e um esquema básico** para visualizar m
 
 Aqui está a imagem com o esquema e cálculos para o inversor de 12V DC para 230V AC usando TRIACs ou transístores.
 - https://www.electronica-pt.com/triac-tiristor
+- Para calcular a corrente elétrica (amperes), usamos a fórmula da potência elétrica:  
+
+\[
+I = \frac{P}{V}
+\]
+
+Onde:  
+- \( I \) é a corrente elétrica em amperes (A),  
+- \( P \) é a potência em watts (W),  
+- \( V \) é a tensão em volts (V).  
+
+Agora, depende da voltagem da rede elétrica:
+
+- **Para 110V:**  
+  \[
+  I = \frac{1400W}{110V} = 12,73A
+  \]
+
+- **Para 220V:**  
+  \[
+  I = \frac{1400W}{220V} = 6,36A
+  \]
+
+Então, **1400W equivalem a aproximadamente 12,73A em 110V ou 6,36A em 220V**.
