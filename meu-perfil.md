@@ -1,1 +1,0 @@
-traduzindo ainda
