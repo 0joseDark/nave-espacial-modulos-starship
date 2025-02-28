@@ -1,0 +1,4 @@
+- I'm putting together the starship crew, a crew of 5 talented people.
+- objective, control the ship's AI-bot-robot, So, we will use second life https://secondlife.com/ to communicate.
+- I have some talents, communication is one of my talents.
+- I need experts, like a mathematician
