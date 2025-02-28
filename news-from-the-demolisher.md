@@ -3,3 +3,4 @@
 - I have some talents, communication is one of my talents.
 - I need experts, like a mathematician
 - in the second life, send note or IM to darkness orsini
+- all work is done remotely
