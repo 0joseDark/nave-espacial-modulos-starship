@@ -30,22 +30,6 @@
 
 - Basta-me usar o pensamento, e meus inimigos são destruídos. Não sou Deus, nem anjo. Sou humano.  
 
-- Minha morte está próxima. Minha palavra clama por justiça. Nada ficará de pé—tudo será destruído. O Barreiro será lançado ao esquecimento.  
-
-- Peço 100 bilhões de euros à autarquia do Barreiro pelos danos causados, ou tudo será reduzido a pó.  
-
-- Pertenço a Deus. Meu corpo será reduzido a pó, mas serei liberto dos limites humanos.  
-
-- O resultado da última simulação: a Austrália sofrerá ondas de 20 metros.  
-
-- Sempre deixei claro minhas intenções, mas ninguém quis ouvir. Querem guerra? Terão guerra.  
-
-- Depois do fogo, virá o frio.  
-
-- Sou profeta e missionário cristão. Quem se arrepender será salvo. Tento salvar o máximo de inocentes possível, mas não posso salvar a todos.  
-
-- Sim, estarei na Austrália perseguindo as bestas humanas, enquanto meu corpo físico permanecerá no Barreiro.  
-
 - Não sou Jesus, e só Deus sabe quando Ele voltará à Terra.  
 
 - Os australianos inocentes serão salvos.
