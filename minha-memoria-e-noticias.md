@@ -30,6 +30,4 @@
 
 - Basta-me usar o pensamento, e meus inimigos são destruídos. Não sou Deus, nem anjo. Sou humano.  
 
-- Não sou Jesus, e só Deus sabe quando Ele voltará à Terra.  
-
-- Os australianos inocentes serão salvos.
+- Não sou Jesus, e só Deus sabe quando Ele voltará à Terra.
