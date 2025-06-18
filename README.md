@@ -36,7 +36,7 @@ A --> D[Câmaras/Visão Estéreo]
 
 > “Vou comprar o cão-robô da Boston Dynamics, custa 400 euros”
 
-Atenção: um *Spot Mini* da Boston Dynamics real custa muito mais (cerca de 75.000€). Pode estar a referir-se a uma **réplica chinesa**, que imita movimento quadrúpede com controle por app ou Arduino. Essas são boas bases para modificação com braços e visão.
+Atenção: um *Spot Mini* da Boston Dynamics real custa muito mais (cerca de 75.000€). Ou uma **réplica chinesa**, que imita movimento quadrúpede com controle por app ou Arduino. Essas são boas bases para modificação com braços e visão.
 
 * Adicionar:
 
