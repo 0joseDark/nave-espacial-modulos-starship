@@ -133,6 +133,6 @@ A fazer:
 * Esquemas eletrónicos
 * Código para caminhar com pernas pneumáticas
 * Interface gráfica para comando remoto
-* Simulador 3D do robô nave no espaço
+* Simulador 3D da nave robô, no espaço
 
 
