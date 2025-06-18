@@ -130,3 +130,205 @@ Note: a real *Spot Mini* from Boston Dynamics costs much more (around €75,000)
 * Code for walking with pneumatic legs
 * Graphical interface for remote control
 * 3D simulator of the robot ship in space
+---
+Here is the English translation of the complete project explanation and code setup:
+
+---
+
+## 🔧 Architecture
+
+```
+[PC with Qt GUI] ─── SSH ───> [Raspberry Pi]
+                                   │
+               ┌───────────────────┴──────────────────┐
+               │                                      │
+         [Arduino A via USB]                  [Arduino B via USB]
+```
+
+---
+
+## 1. Python Script with Qt GUI (Client PC)
+
+### Requirements:
+
+```bash
+pip install PyQt5 paramiko
+```
+
+### Code `client_gui.py`
+
+```python
+import sys
+import paramiko
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLabel, QComboBox, QMenuBar, QFileDialog, QMessageBox
+
+class MainWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Remote Arduino Control")
+        self.resize(400, 300)
+        
+        self.user = "pi"
+        self.host = "192.168.1.100"  # Raspberry Pi IP
+        self.port = 22
+        self.password = "raspberry"
+        
+        self.init_ui()
+    
+    def init_ui(self):
+        layout = QVBoxLayout()
+
+        menu_bar = QMenuBar(self)
+        file_menu = menu_bar.addMenu("File")
+        file_menu.addAction("Exit", self.close)
+        layout.setMenuBar(menu_bar)
+
+        self.combo_arduino = QComboBox()
+        self.combo_arduino.addItems(["Arduino A", "Arduino B"])
+        layout.addWidget(self.combo_arduino)
+
+        self.status_label = QLabel("Off")
+        layout.addWidget(self.status_label)
+
+        btn_on = QPushButton("Turn On")
+        btn_on.clicked.connect(self.turn_on_arduino)
+        layout.addWidget(btn_on)
+
+        btn_off = QPushButton("Turn Off")
+        btn_off.clicked.connect(self.turn_off_arduino)
+        layout.addWidget(btn_off)
+
+        self.setLayout(layout)
+
+    def run_remote_command(self, command):
+        try:
+            client = paramiko.SSHClient()
+            client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            client.connect(hostname=self.host, username=self.user, password=self.password, port=self.port)
+
+            stdin, stdout, stderr = client.exec_command(command)
+            output = stdout.read().decode().strip()
+            client.close()
+            return output
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"SSH connection error: {e}")
+            return None
+
+    def turn_on_arduino(self):
+        arduino = self.combo_arduino.currentText()
+        command = f"python3 turn_on_{arduino.lower().replace(' ', '_')}.py"
+        result = self.run_remote_command(command)
+        if result is not None:
+            self.status_label.setText(f"{arduino} turned on")
+
+    def turn_off_arduino(self):
+        arduino = self.combo_arduino.currentText()
+        command = f"python3 turn_off_{arduino.lower().replace(' ', '_')}.py"
+        result = self.run_remote_command(command)
+        if result is not None:
+            self.status_label.setText(f"{arduino} turned off")
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+```
+
+---
+
+## 2. Python Scripts on the Raspberry Pi
+
+### Install dependencies:
+
+```bash
+sudo apt update
+sudo apt install python3-serial
+```
+
+### `turn_on_arduino_a.py`
+
+```python
+import serial
+arduino = serial.Serial('/dev/ttyUSB0', 9600)
+arduino.write(b'TURN_ON\n')
+```
+
+### `turn_off_arduino_a.py`
+
+```python
+import serial
+arduino = serial.Serial('/dev/ttyUSB0', 9600)
+arduino.write(b'TURN_OFF\n')
+```
+
+### `turn_on_arduino_b.py`
+
+```python
+import serial
+arduino = serial.Serial('/dev/ttyUSB1', 9600)
+arduino.write(b'TURN_ON\n')
+```
+
+### `turn_off_arduino_b.py`
+
+```python
+import serial
+arduino = serial.Serial('/dev/ttyUSB1', 9600)
+arduino.write(b'TURN_OFF\n')
+```
+
+---
+
+## 3. Arduino Scripts (for both)
+
+### Code `arduino_a.ino` (same for `arduino_b.ino` with pin adjustments if needed)
+
+```cpp
+void setup() {
+  Serial.begin(9600);
+  pinMode(13, OUTPUT); // LED or motor
+}
+
+void loop() {
+  if (Serial.available()) {
+    String command = Serial.readStringUntil('\n');
+    command.trim();
+
+    if (command == "TURN_ON") {
+      digitalWrite(13, HIGH);
+    } else if (command == "TURN_OFF") {
+      digitalWrite(13, LOW);
+    }
+  }
+}
+```
+
+---
+
+## 🧪 Test on:
+
+### 🪟 Windows 10 / 🐧 Ubuntu / 🍎 Mac:
+
+1. Install Python 3 and `PyQt5` + `paramiko`:
+
+   ```bash
+   pip install pyqt5 paramiko
+   ```
+
+2. Run the script:
+
+   ```bash
+   python client_gui.py
+   ```
+
+---
+
+## ✅ What’s included
+
+* Qt GUI with buttons and menu.
+* Automatic SSH connection to Raspberry Pi.
+* Individual control of Arduino A and B.
+* Serial communication using simple commands "TURN\_ON" and "TURN\_OFF".
+* Cross-platform compatibility.
+
