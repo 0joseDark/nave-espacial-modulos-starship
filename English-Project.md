@@ -130,8 +130,6 @@ Note: a real *Spot Mini* from Boston Dynamics costs much more (around €75,000)
 * Code for walking with pneumatic legs
 * Graphical interface for remote control
 * 3D simulator of the robot ship in space
----
-Here is the English translation of the complete project explanation and code setup:
 
 ---
 
