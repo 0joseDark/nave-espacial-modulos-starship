@@ -4,7 +4,7 @@ Plano ambicioso e futurista — mistura conceitos reais da robótica moderna com
 
 ### 🧠 **Resumo do Projeto**
 
-**Objetivo:** Construir um robô inspirado na Boston Dynamics, com 4 patas, 2 braços e sensores visuais, para exploração espacial automatizada, ancoragem em asteroides, construção remota de bases e naves, com alimentação solar.
+**Objetivo:** Construir um robô inspirado na bio-robotica tipo Boston Dynamics, com 4 patas, 2 braços e sensores visuais, para exploração espacial automatizada, ancoragem em asteroides, construção remota de bases e naves, com alimentação solar.
 
 ---
 
