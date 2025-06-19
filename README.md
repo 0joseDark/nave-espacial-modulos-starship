@@ -341,5 +341,20 @@ void loop() {
 * Controlo individual dos Arduinos A e B.
 * Comunicação série com comandos simples "LIGAR" e "DESLIGAR".
 * Compatibilidade multiplataforma.
+---
+- __Alentejano__ <=> __eletrónica_digital__
+
+* **Portas lógicas** (AND, OR, NOT, NAND, NOR, XOR, XNOR)
+* **Álgebra de Boole** e simplificação de expressões
+* **Mapas de Karnaugh**
+* **Flip-flops** (SR, JK, D, T)
+* **Contadores e registos**
+* **Multiplexadores, demultiplexadores, codificadores e descodificadores**
+* **Memórias (RAM, ROM, EEPROM)**
+* **Microcontroladores** e **FPGA**
+* **Circuitos sequenciais e combinatórios**
+* **Conversores A/D e D/A**
+
+Diz-me o que precisas: teoria, explicações, exercícios resolvidos, simulações, ajuda com VHDL/Verilog, ou até circuitos práticos com Arduino ou outros chips digitais?
 
 
