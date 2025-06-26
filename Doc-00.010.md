@@ -1,1 +1,2 @@
-já fiz último desenho do motor a hidrogênio e oxigénio 
+- já fiz último desenho do motor a hidrogênio e oxigénio 
+- CO2 zero 
